@@ -1,42 +1,60 @@
+@tablet: 769;
+@desktop: 1024;
+@widescreen: 1216;
+@fullhd: 1408;
 
-// margin-top --- start
-.mt(@i) when(@i <= 200) {
-  .mt@{i} {
-    margin-top: @i + 0px;
+.s_mobile(@content) {
+  @media screen and (max-width: @tablet - 1px) {
+    @content();
   }
-  .mt((@i + 2));
 }
-.mt(0);
-// margin-top --- end
 
-
-// line-height --- start
-.lh(@i) when(@i <= 120) {
-  .lh@{i} {
-    line-height: @i + 0px;
+// <= 1023
+.s_tablet(@content) {
+  @media screen and (min-width: @tablet + 0px) {
+    @content();
   }
-  .lh((@i + 2));
 }
-.lh(0);
-// line-height --- end
-
-
-// margin-left --- start
-.ml(@i) when(@i <= 100) {
-  .ml@{i} {
-    margin-left: @i + 0px;
+// 在 769px 和 1023px 之间
+.s_tablet-only(@content) {
+  @media screen and (min-width: @tablet + 0px) and (max-width: @desktop - 1px) {
+    @content();
   }
-  .ml((@i + 1));
 }
-.ml(0);
-// margin-left --- end
 
-// font-size --- start
-.fz(@i) when(@i <= 100) {
-  .fz@{i} {
-    font-size: @i + 0px;
+
+// <= 1024
+.s_desktop(@content) {
+  @media screen and (min-width: @desktop + 0px) {
+    @content();
   }
-  .fz((@i + 2));
 }
-.fz(0);
-// font-size --- end
+// 在 1024px 和 1215px 之间
+.s_desktop_only(@content) {
+  @media screen and (min-width: @desktop + 0px) and (max-width: @widescreen - 1px) {
+    @content();
+  }
+}
+
+
+// <= 1216
+.s_widescreen(@content) {
+  @media screen and (min-width: @widescreen + 0px) {
+    @content();
+  }
+}
+// 在 1216px 和 1407px 之间
+.s_widescreen_only(@content) {
+  @media screen and (min-width: @widescreen + 0px) and (max-width: @fullhd - 1px) {
+    @content();
+  }
+}
+
+
+// <= 1408
+.s_fullhd(@content) {
+  @media screen and (max-width: @fullhd - 1px) {
+    @content();
+  }
+}
+

@@ -5,9 +5,9 @@ export default [
     routes: [
       {
         path: '/',
-        component: '@/pages/index',
-        title: '浦江车友会黄金卡',
-      },
+        component: '@/pages/home',
+        title: 'hello world',
+      }
     ]
   },
 ]

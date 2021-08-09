@@ -19,8 +19,11 @@
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
     "axios": "^0.21.1",
+    "bootstrap": "5.0.2",
+    "fullpage.js": "^3.1.2",
     "nprogress": "^0.2.0",
     "react": "17.x",
+    "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "17.x",
     "umi": "^3.5.14"
   },
