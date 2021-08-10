@@ -5,9 +5,14 @@ export default [
     routes: [
       {
         path: '/',
-        component: '@/pages/home',
+        component: '@/pages/pc/home',
         title: 'hello world',
-      }
+      },
+      {
+        path: '/shop',
+        component: '@/pages/pc/shop',
+        title: 'hello world',
+      },
     ]
   },
 ]

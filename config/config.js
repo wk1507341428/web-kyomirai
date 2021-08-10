@@ -9,7 +9,7 @@ export default defineConfig({
   routes: routes,
   // extraPostCSSPlugins: [
   //   require('postcss-plugin-px2rem')({
-  //     rootValue: 75,
+  //     rootValue: 750,
   //     exclude: '/node_modules/',
   //   }),
   // ]

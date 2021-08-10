@@ -1,66 +1,45 @@
 @import '~@/assets/styles/var.less';
-@logoW: 271;
-@logoH: 59;
 
 .nav_bar_wrap {
   box-sizing: border-box;
   background-color: white;
-  min-height: 3.25rem;
   position: fixed;
   width: 100%;
+  height: .px2vw(100);
   z-index: 30;
-  padding: 20px 0;
+  padding: .px2vw(20)[@vw] 0;
   .nav_bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .nav_logo {
-      width: @logoW + 0px;
-      height: @logoH + 0px;
+      width: .px2vw(271)[@vw];
+      height: .px2vw(59)[@vw];
       background: url('~@/assets/images/logo.png') no-repeat;
       background-size: 100% 100%;
     }
-
-      
-      .s_tablet({
-        .nav_logo {
-          width: @logoW * 0.75px;
-          height: @logoH * 0.75px;
-        }
-      });
-
-      // @media (min-width:1024px){
-      //   .nav_logo {
-      //     width: @logoW * 0.75px;
-      //     height: @logoH * 0.75px;
-      //   }
-      // }
-
-
-      // @media (max-width:1215px){
-      //   .nav_logo {
-      //     width: @logoW * 0.8px;
-      //     height: @logoH * 0.8px;
-      //   }
-      // }
-
-
-      // @media (max-width:1407px){
-      //   .nav_logo {
-      //     width: @logoW * 0.85px;
-      //     height: @logoH * 0.85px;
-      //   }
-      // }
 
     .navbar_menu {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: .px2vw(18)[@vw];
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #8F9293;
+      line-height: .px2vw(39)[@vw];
       .navbar_item {
-        margin: 0 20px;
+        margin: 0 .px2vw(20)[@vw];;
         cursor: pointer;
       }
     }
+
+    // 
+    .s_mobile({
+      .navbar_menu {
+        display: none;
+      }
+    });
   }
 }
