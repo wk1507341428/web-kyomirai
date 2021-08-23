@@ -1,0 +1,83 @@
+.pages {
+  padding-top: 160px;
+  overflow: hidden;
+  max-width: 810px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  .section {
+    margin: 0 auto 18px;
+    .h {
+      text-align: center;
+      h1 {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        line-height: 1.0;
+        color: #7e7e7e;
+      }
+
+      .tips {
+        margin-bottom: 50px;
+        letter-spacing: 0.15em;
+        font-size: 16px;
+        line-height: 1.0;
+      }
+    }
+
+    .contentsArea {
+      .inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin: 0 auto 0;
+        .staffList {
+          list-style-type: none;
+          margin: 0 0 50px;
+          width: calc(220 / 770 * 100%);
+          margin-right: calc((100% - 220 / 770 * 100% * 3) / 2);
+          -webkit-transition: opacity 300ms ease-out;
+          transition: opacity 300ms ease-out;
+          cursor: pointer;
+          &:nth-of-type(3n) {
+            margin-right: 0;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+          .top {
+            margin-bottom: 14px;
+            img {
+              display: block;
+              height: auto;
+              max-width: 100%;
+            }
+          }
+          .bottom {
+            letter-spacing: 0.15em;
+            .name_ja {
+              margin-bottom: 0.2em;
+            }
+            .name_en {
+              font-size: 0.7em;
+            }
+            .affiliation {
+              font-size: 0.9em;
+            }
+            p {
+              line-height: 1.5;
+              margin: 0 0 1em 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

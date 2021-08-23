@@ -1,0 +1,68 @@
+.moviebtn {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  dl {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    &::before {
+      content: "";
+      width: 7.5vw;
+      height: 1px;
+      background-color: #fff;
+      animation: bar 2s linear 1s infinite normal running;
+    }
+
+    dt {
+      font-size: 1vw;
+      letter-spacing: 0.1em;
+      margin-left: 15px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    dd {
+      transition: opacity 300ms ease-out;
+      width: 3vw;
+      height: 3vw;
+      margin: 0 0 0 14px;
+      opacity: 1;
+    }
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes bar {
+  0% {
+    -webkit-transform-origin: right 50%;
+            transform-origin: right 50%;
+    -webkit-transform: scaleX(1) translateY(-50%);
+            transform: scaleX(1) translateY(-50%);
+  }
+  50% {
+    -webkit-transform-origin: right 50%;
+            transform-origin: right 50%;
+    -webkit-transform: scaleX(0) translateY(-50%);
+            transform: scaleX(0) translateY(-50%);
+  }
+  51% {
+    -webkit-transform-origin: left 50%;
+            transform-origin: left 50%;
+    -webkit-transform: scaleX(0) translateY(-50%);
+            transform: scaleX(0) translateY(-50%);
+  }
+  100% {
+    -webkit-transform-origin: left 50%;
+            transform-origin: left 50%;
+    -webkit-transform: scaleX(1) translateY(-50%);
+            transform: scaleX(1) translateY(-50%);
+  }
+}

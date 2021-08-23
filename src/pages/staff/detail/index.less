@@ -1,0 +1,141 @@
+.pages {
+  padding-top: 160px;
+  overflow: hidden;
+  max-width: 930px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  .section {
+    margin: 0 auto 18px;
+    .h {
+      text-align: center;
+      h1 {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 28px;
+        letter-spacing: 0.1em;
+        line-height: 1;
+        color: #7e7e7e;
+      }
+
+      .tips {
+        margin-bottom: 50px;
+        letter-spacing: 0.15em;
+        font-size: 16px;
+        line-height: 1;
+      }
+    }
+
+    .contentsArea {
+      .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto 0;
+        padding-bottom: 108px;
+
+        .left {
+          max-width: 380px;
+          .wp_block_image {
+            margin-top: 40px;
+            &:first-of-type {
+              margin-top: 0;
+            }
+          }
+        }
+
+        .right {
+          width: 408px;
+
+          .profile {
+            padding-top: 80px;
+            .nameArea {
+              text-align: center;
+            }
+          }
+
+          .todays,
+          .futures {
+            margin-top: 64px;
+            h3 {
+              margin-bottom: 1.6em;
+              letter-spacing: 0.2em;
+              font-size: 20px;
+              font-weight: bold;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .pgNv {
+        border-top: 1px solid #000;
+        padding-top: 2em;
+        .pgNvInr {
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          align-items: center;
+          .goto {
+            display: inline-block;
+            width: fit-content;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            font-size: 0.8em;
+            cursor: pointer;
+            &.prv {
+              span {
+                margin-left: 3em;
+              }
+              &::before {
+                left: 0;
+                transform-origin: 50% 50%;
+                transform: translate(0.3em, -50%) rotate(-135deg);
+              }
+            }
+
+            &.next {
+              span {
+                margin-right: 3em;
+              }
+              &::before {
+                right: 0;
+                transform-origin: 50% 50%;
+                transform: translate(-0.3em, -50%) rotate(45deg);
+              }
+            }
+            &::before {
+              content: '';
+              display: inline-block;
+              width: 1.3em;
+              height: 1.3em;
+              position: absolute;
+              top: 50%;
+              border-top: solid 1px #000;
+              border-right: solid 1px #000;
+            }
+          }
+
+          .list {
+            display: inline-block;
+            width: 1.675em;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            img {
+              cursor: pointer;
+              width: 100%;
+              transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+              height: auto;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

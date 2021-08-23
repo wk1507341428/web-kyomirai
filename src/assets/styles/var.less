@@ -1,3 +1,4 @@
+
 @tablet: 769;
 @desktop: 1024;
 @widescreen: 1216;
@@ -61,8 +62,180 @@
   }
 }
 
-@default-w: 1920;
+// >= 1980px
+.s_maxscreen(@content) {
+  @media screen and (min-width: 1980px) {
+    @content();
+  }
+}
+
+// <= 1024
+.s_touch(@content) {
+  @media screen and (max-width: @desktop + 0px) {
+    @content();
+  }
+}
+
 .px2vw(@px) {
-  @var: unit(@px / 19.2);
+  @var: unit(@px / 19.8);
   @vw: ~'@{var}vw';
+  @min: unit(@px / 1980 * 1024);
+  @minpx: ~'@{min}px';
+}
+
+.min_max_wh(@w, @h) {
+  width: .px2vw(@w)[@vw];
+  height:.px2vw(@h)[@vw];
+  max-width: @w + 0px;
+  max-height: @h + 0px;
+  min-width: .px2vw(@w)[@minpx];
+  min-height: .px2vw(@h)[@minpx];
+}
+
+.bgImg(@w, @h, @url) {
+  .min_max_wh(@w, @h);
+  background: url(@url) no-repeat;
+  background-size: 100% 100%;
+}
+
+.min_max_font(@px, @lh) {
+  font-size: .px2vw(@px)[@vw];
+  line-height: .px2vw(@lh)[@vw];
+  .s_touch({
+    font-size: .px2vw(@px)[@minpx];
+    line-height: .px2vw(@lh)[@minpx];
+  });
+  .s_maxscreen({
+    font-size: @px + 0px;
+    line-height: @lh + 0px;
+  });
+}
+
+.min_max_m(@t, @r, @b, @l) {
+  margin: 
+    .px2vw(@t)[@vw]
+    .px2vw(@r)[@vw]
+    .px2vw(@b)[@vw]
+    .px2vw(@l)[@vw];
+
+  .s_touch({
+    margin: 
+      .px2vw(@t)[@minpx]
+      .px2vw(@r)[@minpx]
+      .px2vw(@b)[@minpx]
+      .px2vw(@l)[@minpx];
+  });
+  .s_maxscreen({
+    margin: 
+      @t + 0px 
+      @r + 0px 
+      @b + 0px 
+      @l + 0px;
+  });
+  
+
+}
+
+.min_max_p(@t, @r, @b, @l) {
+  padding: 
+    .px2vw(@t)[@vw]
+    .px2vw(@r)[@vw]
+    .px2vw(@b)[@vw]
+    .px2vw(@l)[@vw];
+
+  .s_touch({
+    padding:
+      .px2vw(@t)[@minpx]
+      .px2vw(@r)[@minpx]
+      .px2vw(@b)[@minpx]
+      .px2vw(@l)[@minpx];
+  });
+  .s_maxscreen({
+    padding: 
+      @t + 0px 
+      @r + 0px 
+      @b + 0px 
+      @l + 0px;
+  });
+  
+
+}
+
+.min_max_ls(@px) {
+  letter-spacing: .px2vw(@px)[@vw];
+
+  .s_touch({
+    letter-spacing: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    letter-spacing: @px + 0px;
+  });
+}
+
+
+.min_max_br(@px) {
+  border-radius: .px2vw(@px)[@vw];
+
+  .s_touch({
+    border-radius: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    border-radius: @px + 0px;
+  });
+}
+
+.circle(@w, @c) {
+  .min_max_wh(@w, @w);
+  border-radius: 1000px;
+  border: .px2vw(@w / 4)[@vw] solid @c;
+  .s_touch({
+    border: .px2vw(@w / 4)[@minpx] solid @c;
+  });
+  .s_maxscreen({
+    border: @w / 4 + 0px solid @c;
+  });
+}
+
+.min_max_left(@px) {
+  left: .px2vw(@px)[@vw];
+
+  .s_touch({
+    left: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    left: @px + 0px;
+  });
+}
+
+.min_max_top(@px) {
+  top: .px2vw(@px)[@vw];
+
+  .s_touch({
+    top: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    top: @px + 0px;
+  });
+}
+
+.min_max_right(@px) {
+  right: .px2vw(@px)[@vw];
+
+  .s_touch({
+    right: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    right: @px + 0px;
+  });
+}
+
+.min_max_bottom(@px) {
+  bottom: .px2vw(@px)[@vw];
+
+  .s_touch({
+    bottom: .px2vw(@px)[@minpx];
+  });
+  .s_maxscreen({
+    bottom: @px + 0px;
+  });
 }

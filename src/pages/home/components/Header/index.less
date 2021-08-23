@@ -1,0 +1,38 @@
+@import '~@/assets/styles/var.less';
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .min_max_p(14, 30, 14, 30);
+  box-sizing: border-box;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  h1 {
+    img {
+      display: block;
+      .min_max_wh(133, 25);      
+    }
+  }
+
+  .contactNav {
+    color: #fff;
+    font-weight: bold;
+    .min_max_font(16, 18);
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '';
+      width: 18px;
+      height: 14px;
+      background: url('~@/assets/images/icon_contact_top.png') no-repeat;
+      background-size: contain;
+      display: inline-block;
+      margin-right: 0.5em;
+      vertical-align: top;
+    }
+  }
+}

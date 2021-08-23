@@ -5,13 +5,18 @@ export default [
     routes: [
       {
         path: '/',
-        component: '@/pages/pc/home',
-        title: 'hello world',
+        component: '@/pages/home',
+        title: 'KYOMIRAI | 京未来株式会社',
       },
       {
-        path: '/shop',
-        component: '@/pages/pc/shop',
-        title: 'hello world',
+        path: '/staff',
+        component: '@/pages/staff',
+        title: 'KYOMIRAI | 京未来株式会社',
+      },
+      {
+        path: '/staffDetail',
+        component: '@/pages/staff/detail',
+        title: 'KYOMIRAI | 京未来株式会社',
       },
     ]
   },

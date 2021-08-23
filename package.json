@@ -18,13 +18,13 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "animate.css": "^4.1.1",
     "axios": "^0.21.1",
-    "bootstrap": "5.0.2",
-    "fullpage.js": "^3.1.2",
     "nprogress": "^0.2.0",
     "react": "17.x",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "17.x",
+    "swiper": "^6.8.2",
     "umi": "^3.5.14"
   },
   "devDependencies": {
@@ -32,6 +32,7 @@
     "@types/react-dom": "^17.0.0",
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.5.14",
+    "file-loader": "^6.2.0",
     "lint-staged": "^10.0.7",
     "postcss-plugin-px2rem": "^0.8.1",
     "prettier": "^2.2.0",

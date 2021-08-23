@@ -1,0 +1,67 @@
+@import '~@/assets/styles/var.less';
+.pages {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .logo {
+    position: absolute;
+    .min_max_left(30);
+    .min_max_top(16);
+    z-index: 99;
+    .min_max_wh(140, 30);
+  }
+
+  .screen_box {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.stepWrap {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+  .min_max_font(22, 32); 
+  .min_max_p(0,30,0,30);
+  .min_max_bottom(30);
+  .step {
+    .min_max_wh(250, 87);
+    border-bottom: 1px solid #fff;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 0.1em;
+    position: relative;
+
+    &.current {
+      &::after{
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 300ms ease-out;
+    }
+
+    .en {
+      // .min_max_ls(4);
+    }
+    .zh {
+      .min_max_m(2,0,0,0);
+    }
+  }
+}
