@@ -26,6 +26,7 @@ export default ({
 			</div>
       <div className={$styles.textArea}>
         <Description 
+          link = {'business'}
           title = {'BUSINESS'} 
           mark = {'事业领域'}
           tips = {'京未来让在日本市场休眠中的<br />商品“蜕变”为爆品。'} />

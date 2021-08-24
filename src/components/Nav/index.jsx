@@ -1,5 +1,6 @@
 import React from 'react';
 import $styles from './index.less'
+import { Link } from 'umi'
 
 export default () => {
   return (
@@ -19,10 +20,10 @@ export default () => {
         </div>
         <div className={$styles.header_navigation_wrapper}>
           <div className={$styles.menu}>
-            <div className={$styles.menu_item}>BUSINESS</div>
-            <div className={$styles.menu_item}>PHILOSOPHY</div>
-            <div className={$styles.menu_item}>COMPANY</div>
-            <div className={$styles.menu_item}>INTERVIEW</div>
+            <Link to={'/business'} className={$styles.menu_item}>BUSINESS</Link>
+            <Link to={'/philosophy'} className={$styles.menu_item}>PHILOSOPHY</Link>
+            <Link to={'/company'} className={$styles.menu_item}>COMPANY</Link>
+            <Link to={'/interview'} className={$styles.menu_item}>INTERVIEW</Link>
           </div>
         </div>
         <div className={$styles.contactNav}>

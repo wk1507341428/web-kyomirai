@@ -27,6 +27,7 @@ export default ({
         <Description 
           title = {'PHILOSOPHY'} 
           mark = {'思想'}
+          link = {'/philosophy'}
           tips = {'思今日所想、未来所成想'} />
       </div>
       <video ref={ref} 

@@ -34,6 +34,29 @@
         position: relative;
         display: inline-block;
         cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        transition: color 300ms ease-out;
+        position: relative;
+        display: inline-block;
+        &:hover {
+          color: #e60020;
+          &::after {
+            width: 56%;
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 3px;
+          background-color: #e60020;
+          position: absolute;
+          bottom: -14px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: all 300ms ease-out;
+        }
       }
     }
   }

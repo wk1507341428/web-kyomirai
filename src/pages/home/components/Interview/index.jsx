@@ -25,6 +25,7 @@ export default ({
 			</div>
       <div className={$styles.textArea}>
         <Description 
+          link={'/interview'}
           title = {'INTERVIEW'}
           mark = {'采访'}
           tips = {'来自共同挑战<br />中国市场的合作伙伴们坦率的声音。'} />

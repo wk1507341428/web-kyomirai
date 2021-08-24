@@ -30,22 +30,22 @@ export default () => {
 
   const tabs = [
     {
-      link: '/',
+      link: '/business',
       zh: '事业领域',
       en: 'BUSINESS',
     },
     {
-      link: '/',
+      link: '/philosophy',
       zh: '思考',
       en: 'PHILOSOPHY',
     },
     {
-      link: '/',
+      link: '/company',
       zh: '会社概要',
       en: 'COMPANY',
     },
     {
-      link: '/',
+      link: '/interview',
       zh: '采访',
       en: 'INTERVIEW',
     },

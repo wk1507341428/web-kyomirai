@@ -25,6 +25,7 @@ export default ({
 			</div>
       <div className={$styles.textArea}>
         <Description
+          link = {'/company'}
           title={'COMPANY'}
           mark = {'公司简介'}
           tips = {'我们连接“人与人”，“企业与企业”<br />“日本与世界”，“今天与未来”。'}  />

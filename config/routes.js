@@ -18,6 +18,26 @@ export default [
         component: '@/pages/staff/detail',
         title: 'KYOMIRAI | 京未来株式会社',
       },
+      {
+        path: '/business',
+        component: '@/pages/business',
+        title: 'KYOMIRAI | 京未来株式会社',
+      },
+      {
+        path: '/philosophy',
+        component: '@/pages/philosophy',
+        title: 'KYOMIRAI | 京未来株式会社',
+      },
+      {
+        path: '/company',
+        component: '@/pages/company',
+        title: 'KYOMIRAI | 京未来株式会社',
+      },
+      {
+        path: '/interview',
+        component: '@/pages/interview',
+        title: 'KYOMIRAI | 京未来株式会社',
+      },
     ]
   },
 ]
