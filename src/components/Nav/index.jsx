@@ -24,11 +24,12 @@ export default () => {
             <Link to={'/philosophy'} className={$styles.menu_item}>PHILOSOPHY</Link>
             <Link to={'/company'} className={$styles.menu_item}>COMPANY</Link>
             <Link to={'/interview'} className={$styles.menu_item}>INTERVIEW</Link>
+            <Link to={'/staff'} className={$styles.menu_item}>STAFF</Link>
           </div>
         </div>
-        <div className={$styles.contactNav}>
+        <Link to={'/contact'} className={$styles.contactNav}>
           CONTACT
-        </div>
+        </Link>
       </div>
     </div>
   )

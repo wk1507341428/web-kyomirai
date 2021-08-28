@@ -8,12 +8,10 @@ export default ({
   useEffect(() => {
     setTimeout(() => {
       hide()
-    }, 2000)
+    }, 1800)
   }, [])
 
   return (
-    <div className={$styles.loading}>
-      <img src={require('@/assets/images/loading.svg')} />
-    </div>
+    <div className={$styles.loading}></div>
   )
 };
